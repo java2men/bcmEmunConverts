@@ -16,8 +16,11 @@ actual object Platform {
 /**
  * Data url
  */
-val urlData = ".../enum.json..."
+val urlData = "/enum.json"
 
+/**
+ * Main function
+ */
 fun main() {
 
     var jsonData = URL(urlData).readText()
