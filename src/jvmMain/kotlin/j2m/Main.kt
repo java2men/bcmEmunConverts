@@ -16,12 +16,19 @@ actual object Platform {
 /**
  * Data url
  */
-val urlData = "/enum.json"
+var urlData: String? = null //.../enum.json...
 
 /**
  * Main function
  */
-fun main() {
+fun main(args: Array<String>) {
+
+    urlData = if (args.isEmpty()) null else args[0]
+
+    if (urlData.isNullOrBlank()) {
+        println("data url not found!")
+        return
+    }
 
     var jsonData = URL(urlData).readText()
     println("$jsonData")
