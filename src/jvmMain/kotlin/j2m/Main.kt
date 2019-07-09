@@ -31,12 +31,11 @@ fun main(args: Array<String>) {
     }
 
     var jsonData = URL(urlData).readText()
-    println("$jsonData")
+    println("json BCM Enum text:\n$jsonData\n")
+
     var bcmEmum = Klaxon().parse<BCMEnum>(jsonData)
-
-    var result = convert(bcmEmum!!)
-
-    println(result)
+    var result = convert(bcmEmum!!).plus('\n')
+    println("EnBCM.java text:\n$result")
 
 }
 
