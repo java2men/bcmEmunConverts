@@ -1,0 +1,4 @@
+rootProject.name = 'bcmEmunConverts'
+
+
+enableFeaturePreview('GRADLE_METADATA')
